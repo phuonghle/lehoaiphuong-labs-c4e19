@@ -60,18 +60,18 @@ for li in li_list:
 
 
 
-# 4. Save data to excel
+# 4. Save data to excel -> DONE
 
 # save_as(records=posts, dest_file_name="itunes.xlsx")
 
 
 # download songs from Utube
 
-
+for song_name in posts:
     options = {
         'default_search': 'ytsearch', # tell downloader to search instead of directly downloading
         'max_downloads': 1, # Tell downloader to download only the first entry (audio)
         'format': 'bestaudio/audio'
     }
     dl = YoutubeDL(options)
-    dl.download([post["Song"] + (" ") + post["Singer"]])
+    dl.download([song_name["Song"]])
