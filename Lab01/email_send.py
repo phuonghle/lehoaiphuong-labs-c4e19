@@ -14,13 +14,18 @@ html_to_send = html_content.replace("{{sickness}}", choice(excuses))
 
 
 
-gmail = GMail("email", "pasw")
-msg = Message("Xin nghỉ học", to="20130075@student.hust.edu.vn", html=html_to_send)
+gmail = GMail("camelliachan092@gmail.com", "passs")
+msg = Message("Xin nghỉ học", to="hoaiphuonglpk@gmail.com", html=html_to_send)
 
 
-While true:
-    If datetime.datetime() == 7:
-    gmail.send(msg)
+# 20130075@student.hust.edu.vn
+
+
+looping = True
+while looping:
+    now = datetime.datetime.now()
+    if now.hour == 7:
+        gmail.send(msg)
         break
 
 
